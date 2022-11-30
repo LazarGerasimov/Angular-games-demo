@@ -1,0 +1,13 @@
+<h2>Game Component</h2>
+<ul>
+    <li *ngFor="let game of games">
+        Game: {{game.title}},
+
+        <span *ngIf="game.price > 36">
+            Price: {{game.price}}
+        </span>
+    </li>
+</ul>
+<button (click)="handleExpandContentClick()">
+    Expand Content
+</button>
