@@ -13,9 +13,9 @@ interface Game {
 })
 export class GameComponent {
   games: Game[] = [
-    { title: 'Battlefield', price: 59, image: "" },
-    { title: 'Diablo', price: 49, image: "" },
-    { title: 'Warframe', price: 36, image: "" }
+    { title: 'Battlefield', price: 59, image: "battlefield" },
+    { title: 'Diablo', price: 49, image: "diablo" },
+    { title: 'Warframe', price: 36, image: "warframe" }
   ]
 
   handleExpandContentClick(): void {
