@@ -3,7 +3,7 @@
     <li *ngFor="let game of games">
         Game: {{game.title}};
 
-        <span class = "game-price" [style.color] = "'red'" *ngIf="game.price > 36">
+        <span class = "game-price" *ngIf="game.price > 36">
             Price: {{game.price}}
         </span>
 
