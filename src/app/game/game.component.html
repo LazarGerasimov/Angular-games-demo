@@ -1,19 +1,24 @@
 <h2>Game Component</h2>
 <div class="game-info">
-<ul>
-    <li *ngFor="let game of games">
-        Game: {{game.title}};
+    <ul #gamesContainer>
+        <li *ngFor="let game of games">
+            Game: {{game.title}};
 
-        <span [class.game-price]="swapColours" *ngIf="game.price > 36">
-            Price: {{game.price}}
-        </span>
+            <span [class.game-price]="swapColours" *ngIf="game.price > 36">
+                Price: {{game.price}}
+            </span>
 
-        <span>
-            <img src="assets/static/{{game.image}}.jpg" width="220">
-        </span>
-    </li>
-</ul>
-<button (click)="handleExpandContentClick()">
-    {{swapColours ? 'Make Price Dark' : 'Make Price Purple'}}
-</button>
+            <span>
+                <img src="assets/static/{{game.image}}.jpg" width="220">
+            </span>
+        </li>
+    </ul>
+
+    <div>
+        Total Games: {{gamesContainer.children.length}}
+    </div>
+
+    <button (click)="handleExpandContentClick(gamesContainer)">
+        {{swapColours ? 'Make Price Dark' : 'Make Price Purple'}}
+    </button>
 </div>

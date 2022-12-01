@@ -18,8 +18,9 @@ export class GameComponent {
     { title: 'Warframe', price: 36, image: "warframe" }
   ]
 
-  handleExpandContentClick(): void {
+  handleExpandContentClick(gamesContainer: HTMLElement): void {
     this.swapColours = this.swapColours ? false : true;
+    console.log(gamesContainer.children)
   }
 
   swapColours: boolean = false;
