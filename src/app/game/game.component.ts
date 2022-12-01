@@ -17,12 +17,15 @@ export class GameComponent {
     { title: 'Diablo', price: 49, image: "diablo" },
     { title: 'Warframe', price: 36, image: "warframe" }
   ]
+  
+  swapColours: boolean = false;
 
   handleExpandContentClick(gamesContainer: HTMLElement): void {
     this.swapColours = this.swapColours ? false : true;
     console.log(gamesContainer.children)
   }
 
-  swapColours: boolean = false;
-
+  handleSearchChange(event: any): void {
+    console.log(event)
+  }
 }
