@@ -1,9 +1,10 @@
 <h2>Game Component</h2>
+<div class="game-info">
 <ul>
     <li *ngFor="let game of games">
         Game: {{game.title}};
 
-        <span class = "game-price" *ngIf="game.price > 36">
+        <span [class.game-price]="swapColours" *ngIf="game.price > 36">
             Price: {{game.price}}
         </span>
 
@@ -13,5 +14,6 @@
     </li>
 </ul>
 <button (click)="handleExpandContentClick()">
-    Expand Content
+    Swap Colours
 </button>
+</div>

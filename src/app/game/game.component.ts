@@ -19,7 +19,9 @@ export class GameComponent {
   ]
 
   handleExpandContentClick(): void {
-    alert('Expand clicked')
+    this.swapColours = this.swapColours ? false : true;
   }
+
+  swapColours: boolean = false;
 
 }
