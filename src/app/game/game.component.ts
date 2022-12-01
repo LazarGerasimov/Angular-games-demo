@@ -19,6 +19,7 @@ export class GameComponent {
   ]
   
   swapColours: boolean = false;
+  showGameItemComponent: boolean = false;
 
   handleExpandContentClick(gamesContainer: HTMLElement): void {
     this.swapColours = this.swapColours ? false : true;
@@ -27,6 +28,11 @@ export class GameComponent {
 
   handleSearchChange(event: any): void {
     console.log(event)
+  }
+
+  handleCreateOrDestroyGameItem(): void {
+    this.showGameItemComponent = this.showGameItemComponent ? false: true;
+    
   }
 
   searchText: string = 'Game';

@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
+import { GameItemComponent } from './game/game-item/game-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
+    GameItemComponent
   ],
   imports: [
     BrowserModule,

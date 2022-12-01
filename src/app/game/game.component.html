@@ -9,21 +9,21 @@
 <div class="game-info">
     <ul #gamesContainer>
         <li *ngFor="let game of games">
-            Game: {{game.title}};
+            <app-game-item *ngIf="showGameItemComponent">
 
-            <span [class.game-price]="swapColours" *ngIf="game.price > 36">
-                Price: {{game.price}}
-            </span>
-
-            <span>
-                <img src="assets/static/{{game.image}}.jpg" width="220">
-            </span>
+            </app-game-item>
+            
         </li>
     </ul>
 
     <div>
         Total Games: {{gamesContainer.children.length}}
     </div>
+
+    <button (click)="handleCreateOrDestroyGameItem()">
+        {{showGameItemComponent ? 'Destroy Game Item Component' : 'Create Game Item Component'}}
+
+    </button>
 
     <button (click)="handleExpandContentClick(gamesContainer)">
         {{swapColours ? 'Make Price Dark' : 'Make Price Purple'}}
