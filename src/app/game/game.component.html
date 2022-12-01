@@ -1,6 +1,10 @@
 <h2>Game Component</h2>
 
-<input type="text" [value]="'Game 1'" (change)="handleSearchChange($event)" placeholder="Search for game..">
+<input type="text" [(ngModel)]="searchText" (change)="handleSearchChange($event)" placeholder="Search for game..">
+
+<div>
+    Searched text: {{searchText}}
+</div>
 
 <div class="game-info">
     <ul #gamesContainer>

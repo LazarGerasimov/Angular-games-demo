@@ -28,4 +28,6 @@ export class GameComponent {
   handleSearchChange(event: any): void {
     console.log(event)
   }
+
+  searchText: string = 'Game';
 }
