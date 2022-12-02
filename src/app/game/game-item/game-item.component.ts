@@ -13,7 +13,7 @@ export interface Game {
   styleUrls: ['./game-item.component.scss']
 })
 export class GameItemComponent implements OnInit, OnDestroy {
-    @Input() game!: Game;
+    @Input() gameSource!: Game;
 
     ngOnInit(): void {
       console.log('GameItemComponent created')

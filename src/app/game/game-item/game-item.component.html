@@ -1,11 +1,11 @@
 <div>
-    Game: {{game.title}};
+    Game: {{gameSource.title}};
 </div>
 
-<span style="color:coral" *ngIf="game.price > 36">
-    Price: {{game.price}}
+<span style="color:coral" *ngIf="gameSource.price > 36">
+    Price: {{gameSource.price}}
 </span>
 
 <span>
-    <img src="assets/static/{{game.image}}.jpg" width="220">
+    <img src="assets/static/{{gameSource.image}}.jpg" width="220">
 </span>
