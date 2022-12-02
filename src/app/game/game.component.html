@@ -7,9 +7,9 @@
 </div>
 
 <div class="game-info">
-    <ul #gamesContainer>
+    <ul #gamesContainer >
         <li *ngFor="let game of games">
-            <app-game-item [gameSource]="game">
+            <app-game-item *ngIf="showGameItemComponent" [gameSource]="game">
 
             </app-game-item>
             
